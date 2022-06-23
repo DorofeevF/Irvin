@@ -1,0 +1,405 @@
+
+*{
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    margin: 0;
+    letter-spacing: 0.02em;
+}
+body{
+    background-color: #151515;
+    font-style: normal;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 10px; 
+}
+.header {
+    min-height: 662px;
+    position: relative;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0% 100%);
+}
+.header__row{
+    background-color: rgba(0, 0, 0, 0.47);
+    min-height: 70px;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+}
+.header__bg{
+    position: absolute;
+    background-image: url(../images/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    filter: blur(10px);
+}
+.header__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    display: inline-block;
+    color: #DE3333;
+    font-size: 60px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.phone{
+    display: inline-block;
+    margin: 0;
+    font-family: 'Hind Madurai';
+    font-weight: 400;
+    font-size: 25px;
+}
+.header__content {
+    text-align: center;
+}
+.slogan{
+    margin: 126px 0 100px 0;
+    font-size: 80px;
+    letter-spacing: 0.02em;
+}
+.header__button {
+
+    background: #DE3333;
+    box-shadow: 0px 1px 10px rgba(147, 36, 36, 0.57);
+    border-radius: 9px;
+    padding: 20px 32px;
+    font-size: 20px;
+}
+.header__button:hover{
+    box-shadow: 0px 1px 10px rgba(255, 253, 253, 0.57);
+}
+.description {
+    margin: 97px 0 0 0;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.description__bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url(../images/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    filter: blur(7px); 
+}
+.description__text {
+    margin: 0 auto;
+    max-width: 722px;
+    font-size: 25px;
+}
+.services {
+    margin-top: 132px;
+}
+.services-title {
+    text-align: center;
+    margin-bottom: 90px;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
+}
+.services__wrapper {
+    display: flex;
+    align-items: center;
+}
+.services-text{
+    width: 50%;
+    text-align: left;
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 86.9%;
+    margin-right: 3px;
+}
+.services__items{
+    list-style: none;
+    counter-reset: my-counter;
+    width: 50%; 
+    padding-inline-start: 0;
+}
+.services__item {
+    display: flex;
+    align-items: center;
+    position: relative;
+    counter-increment: my-counter;
+    border:  1px solid #504C4C ;
+    border-radius: 3px;
+    font-family: 'Hind Madurai';
+    font-weight: 400;
+    font-size: 18px;
+    color: #979797;
+    margin-bottom: 20px;
+    height: 59px;
+    padding-left: 79px;
+    text-transform: uppercase;
+    transition: all .5s;
+}
+.services__item::before{
+    position: absolute;
+    content: counter(my-counter);
+    color: #DE3333;
+    font-size: 25px;
+    transform: rotate(270deg);
+    left: 25px;
+    transition: all .5s;
+}
+.services__item:hover{
+    border: 1px solid #DE3333;
+}
+.services__item:hover::before{
+    color: white;
+}
+.advantages {
+    margin-top: 132px;
+    text-align: center;
+}
+.advantages-title {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 36px;
+}
+.advantages-text {
+    font-family: 'Hind Madurai';
+    font-weight: 400;
+    font-size: 25px;
+    color: #979797;
+    max-width: 820px;
+    margin: 0 auto;
+}
+.advantages__wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 36px;
+}
+.card {
+    max-width: 280px;
+}
+.advantages__card-pic {
+    color: #DE3333;
+}
+.advantages__card-title {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 40px;
+    margin: 15px 0;
+}
+.advantages__card-text {
+    font-family: 'Hind Madurai';
+    font-weight: 400;
+    font-size: 25px;
+    color: #979797;
+}
+.partnership{
+    display: flex;
+    margin-top: 132px;
+}
+.form-wrapper {
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+.form{
+    margin: 0 auto;
+}
+.form-field {
+    display: block;
+    background: #131212;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    height: 62px;
+    margin-bottom: 25px;
+    width: 288px;
+    padding-left: 5px;
+}
+.form-field::placeholder{
+    font-family: 'Hind Madurai';
+}
+.partnership-text {
+    font-family: 'Montserrat';
+    font-weight: 800;
+    font-size: 60px;
+    width: 50%;
+}
+.button_form{
+    margin: 0 auto;
+}
+.footer{
+    margin-top: 132px;
+}
+.map{
+}
+.footer__content {
+    display: flex;
+
+}
+.footer_wrapper{
+    margin-left: 85px;
+}
+.footer-title{
+    font-family: 'Hind Madurai';
+    font-weight: 400;
+    font-size: 25px;
+    margin-top: 4px;
+}
+.footer-text{
+    font-size: 25px;
+    color: #979797;
+}
+.footer__bottom {
+    height: 118px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+}
+.footer__bottom-text{
+    z-index: 2;
+    margin: 0 auto;
+    font-family: 'Hind Madurai';
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 81.9%;
+}
+.footer_bg{
+    filter: blur(10px);
+    position: absolute;
+    background-image: url(../images/bg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    width: 100%;
+    height: 100%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+}
+@media (max-width: 965px) {
+    .partnership-text{
+        font-size: 40px;
+    }
+}
+@media (max-width: 880px) {
+    .partnership{
+        flex-direction: column;
+    }    
+    .partnership-text{
+        font-size: 40px;
+        order:-1;
+        width: 100%;
+        text-align: center;
+    }
+    .form-wrapper{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .footer__content{
+        flex-direction: column;
+    }
+    .footer_wrapper{
+        order:-1;
+        margin: 0;
+    }
+    .map{
+        width: 100%;
+        height: 20vh;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .footer__bottom{
+        height: 60px;
+    }
+}
+@media (max-width: 830px) {
+    .slogan{
+        font-size: 60px;
+    }
+    .services__wrapper {
+        display:block;
+    }
+    .services-text{
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 20px;
+        text-align: center;
+    }
+    .services__items{
+        width: 100%;
+    }
+    .advantages__wrapper{
+        flex-direction: column;
+        align-items: center;
+    }
+    .card{
+        margin-top: 20px;
+    }
+}
+@media (max-width: 600px) {
+    .logo{
+        font-size: 50px;
+    }
+    .header__top{
+        flex-direction: column;
+    }
+    .header__row{
+        height: 85px;
+    }
+    .description__text{
+        font-size: 20px;
+    }
+    .advantages__card-title{
+        font-size: 30px;
+    }
+    .advantages__card-text{
+        font-size: 25px;
+    }
+    .partnership-text{
+        font-size: 40px;
+    }
+}
+@media (max-width: 500px) {
+    .slogan{
+        margin-top: 100px;
+    }
+}
+@media (max-width: 470px) {
+    .services__item{
+        min-height: 59px;
+    }
+    .partnership-text{
+        font-size: 30px;
+    }
+}
+@media (max-width: 380px) {
+    .advantages-title{
+        font-size: 30px;
+    }
+}
+@media (max-width: 360px) {
+    .slogan{
+        font-size: 40px;
+    }
+}
+@media (max-width: 300px) {
+    .form-field{
+        width: 100%;
+    }
+}
+@media (max-width: 260px) {
+    .header__button{
+        font-size: 13px;
+        padding: 20px 20px;
+    }
+}
